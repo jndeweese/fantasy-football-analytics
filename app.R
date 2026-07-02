@@ -125,7 +125,7 @@ navbar <- page_navbar(
                tags$label("Season", `for` = "season"),
                selectInput("season", NULL, choices = all_seasons,
                            selected = max(all_seasons)))),
-  nav_item(tags$a("Source", href = "https://github.com/jndeweese", target = "_blank"))
+  nav_item(tags$a("Source", href = "https://github.com/jndeweese/fantasy-football-analytics", target = "_blank"))
 )
 
 # Load the team-chip "click to highlight" script once (see team_chip_js()).
