@@ -1,0 +1,52 @@
+# --- Credentials & secrets (NEVER commit) ---
+.Renviron
+*.dcf
+rsconnect/
+
+# Raw ESPN snapshots contain credentials / ESPN owner GUIDs -> keep local only.
+*.RData
+*.RData.lock
+data-raw/ff_snapshot_raw.rds
+data-raw/backup/
+
+# REAL team names live only locally. data/ is NEVER committed (so they can't reach
+# GitHub); the committed, publishable dataset is the anonymized data-public/, built
+# by data-raw/05_make_public_data.R. Regenerate data/ locally via data-raw/03_clean.R.
+/data/
+
+# --- R session / history ---
+.Rhistory
+.RData.bak
+.Rapp.history
+.Ruserdata
+.Rproj.user/
+
+# --- renv: track lockfile + settings, ignore the local library ---
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/staging/
+
+# --- Local-only dev docs (contain real team names in examples) ---
+CLAUDE.md
+
+# --- Local-only reference/exploratory artifacts (real team names as data) ---
+# Not used by the app; kept local so real names never reach a public repo.
+/explore_ffscrapr_2025.Rmd
+/explore_ffscrapr_2025.html
+/ff2023_draft.csv
+/ff2023_draft_cleaned.csv
+/ff2023_merged_data.csv
+/data-raw/adp/2023/ff2023_merged_data.csv
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*~
+
+# Stray root-level data / exploration / prototype files — keep local, not published.
+/*.csv
+/*.Rmd
+/test_ffscrapr.r

@@ -1,0 +1,10 @@
+# Exclude non-app code from renv dependency discovery, so the lockfile (and the
+# shinyapps deployment) only reflects what the app actually loads. Reference
+# .Rmd files and the data pipeline are not part of the deployed app.
+data-raw/
+tools/
+reference/
+*.Rmd
+*.html
+test_ffscrapr.r
+img/

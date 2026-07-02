@@ -1,0 +1,25 @@
+# Files excluded from the shinyapps.io deployment bundle.
+# The deployed app needs only: app.R, R/, data-public/, renv.lock.
+# data/ holds REAL team names -> excluded here so it can NEVER reach the default
+# (public) deploy. The private deploy ships real names via a staging copy instead
+# (see tools/deploy.R). data-public/ is intentionally NOT excluded (public default).
+data/
+data-raw/
+tools/
+img/
+CLAUDE.md
+reference/
+rsconnect/
+*.Rmd
+*.html
+*.csv
+*.RData
+*.Rproj
+test_ffscrapr.r
+.Renviron
+.Renviron.example
+.gitignore
+.gitattributes
+data-dictionary.md
+README.md
+LICENSE

@@ -1,0 +1,15 @@
+# Template for ESPN Fantasy credentials. Copy to `.Renviron` (git-ignored) and
+# fill in your own values, then restart R so they load.
+#
+# How to obtain these for a PRIVATE ESPN league:
+#   1. Log in to https://fantasy.espn.com in a browser.
+#   2. Open DevTools -> Application -> Cookies -> fantasy.espn.com.
+#   3. Copy the values of the `espn_s2` and `SWID` cookies.
+# The `espn_s2` cookie is URL-encoded (contains %2B, %2F, etc.) — paste it as-is.
+#
+# These are only needed to REFRESH data via data-raw/01_pull_espn.R.
+# The Shiny app runs entirely off the committed data-public/*.rds snapshot.
+
+ESPN_S2="paste_your_espn_s2_cookie_here"
+ESPN_SWID="{paste-your-SWID-including-braces}"
+FF_LEAGUE_ID=your_espn_league_id
