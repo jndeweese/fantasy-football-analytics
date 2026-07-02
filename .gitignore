@@ -32,6 +32,9 @@ renv/staging/
 # --- Local-only dev docs (contain real team names in examples) ---
 CLAUDE.md
 
+# --- Local-only maintenance tooling (not part of the published app) ---
+tools/publish.R
+
 # --- Local-only reference/exploratory artifacts (real team names as data) ---
 # Not used by the app; kept local so real names never reach a public repo.
 /explore_ffscrapr_2025.Rmd
